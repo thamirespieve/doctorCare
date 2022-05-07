@@ -596,6 +596,7 @@ footer .social-links {
   nav#navigation .menu li a {
     transition: opacity .4s;
   }
+  nav#navigation .menu li a.active,
   nav#navigation .menu li a:hover {
     opacity: 1;
     font-weight: 700;
@@ -620,13 +621,17 @@ footer .social-links {
     background-color: white;
   }
 
+  nav#navigation .menu li a.active::after,
   nav#navigation .menu li a:hover::after{
     width: 100%;
     padding-inline: 0.8rem;
   }
+  nav#navigation .menu li a.active::after,
   nav#navigation.scroll .menu li a:hover {
     opacity: 1;
   }
+  
+  nav#navigation.scroll .menu a.button.active,
   nav#navigation.scroll .menu a.button:hover{
     background-color: var(--primary-color);
     filter: brightness(1.3);
